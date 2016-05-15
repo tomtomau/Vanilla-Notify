@@ -8,8 +8,8 @@ var vNotify = (function() {
   };
 
   var options = {
-    fadeInDuration: 2000,
-    fadeOutDuration: 2000,
+    fadeInDuration: 300,
+    fadeOutDuration: 300,
     fadeInterval: 50,
     visibleDuration: 5000,
     postHoverVisibleDuration: 500,
@@ -94,7 +94,7 @@ var vNotify = (function() {
 
     item.addEventListener("mouseover", resetInterval);
 
-    fade('in', options.fadeInDuration, item);
+    fade('in', item.options.fadeInDuration, item);
 
     if (!item.options.sticky){
       item.addEventListener("mouseout", hideTimeout);
